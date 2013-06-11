@@ -28,6 +28,8 @@
 		FB9354A2176662B0006FDD0A /* Ejercicio7T11 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Ejercicio7T11; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB9354A5176662B0006FDD0A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FB9354A7176662B0006FDD0A /* Ejercicio7T11.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Ejercicio7T11.1; sourceTree = "<group>"; };
+		FB9354AE17666398006FDD0A /* DCola.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCola.h; sourceTree = "<group>"; };
+		FB9354AF17666398006FDD0A /* Excepciones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Excepciones.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,8 @@
 		FB9354A4176662B0006FDD0A /* Ejercicio7T11 */ = {
 			isa = PBXGroup;
 			children = (
+				FB9354AE17666398006FDD0A /* DCola.h */,
+				FB9354AF17666398006FDD0A /* Excepciones.h */,
 				FB9354A5176662B0006FDD0A /* main.cpp */,
 				FB9354A7176662B0006FDD0A /* Ejercicio7T11.1 */,
 			);
