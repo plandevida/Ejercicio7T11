@@ -28,7 +28,11 @@ bool esSolucion(const DCola<double> &coches, double metrosFerry, double metrosBa
     
     correcto = (metrosFerry >= metrosBabor && metrosFerry >= metrosEstribor);
     
-    return correcto && ((coches.primero() > metrosFerry-metrosBabor) && (coches.primero() > metrosFerry-metrosEstribor));
+    if ( !coches.esVacia() ) {
+        correcto = correcto && ((coches.primero() > metrosFerry-metrosBabor) && (coches.primero() > metrosFerry-metrosEstribor));
+    }
+    
+    return correcto;
 }
 
 void ejer7T11(DCola<double> &coches, double metrosFerry, Lado solucion[], Lado mejorSolucion[], int &numCoches, int numCochesMetidos, int k, double mB, double mE) {
@@ -67,8 +71,13 @@ void ejer7T11(DCola<double> &coches, double metrosFerry, Lado solucion[], Lado m
                     
                     cout << endl << "Tratando solución" << endl;
                     for (int j=0; j < cochesMetidos; j++) {
-                        cout << solucion[j] << ", ";
+                        cout << solucion[j];
+                        
+                        if ( j != cochesMetidos-1) cout << ", ";
                     }
+                    
+                    cout << endl << "Metros Babor: " << metrosBabor;
+                    cout << endl << "Metros Estribor: " << metrosEstribor;
                 }
             }
             else {
@@ -95,12 +104,12 @@ void ejet7T11() {
     coches.ponDetras(0.7);
     coches.ponDetras(0.8);
     
-    int metros = 5;
+    double metros = 5.0;
     
     Lado solucion[coches.numElems()];
     Lado mejorSolucion[coches.numElems()];
     
-    int numCoches = 0;
+    int numCoches = coches.numElems()-2;
     
     ejer7T11(coches, metros, solucion, mejorSolucion, numCoches, 0, 0, 0, 0);
 }
